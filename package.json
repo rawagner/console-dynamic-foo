@@ -1,0 +1,40 @@
+{
+  "name": "dynamic-demo-foo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "yarn clean && NODE_ENV=production yarn ts-node ./node_modules/.bin/webpack",
+    "build-dev": "yarn clean && yarn ts-node ./node_modules/.bin/webpack",
+    "http-server": "./http-server.sh ./dist",
+    "ts-node": "ts-node -O '{\"module\":\"commonjs\"}' -I '/node_modules/(?!(@console)/)/'"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.34",
+    "react": "16.9.0"
+  },
+  "devDependencies": {
+    "@openshift-console/dynamic-plugin-sdk": "0.0.0-alpha1",
+    "@types/react": "16.8.13",
+    "http-server": "0.12.x",
+    "ts-loader": "6.2.2",
+    "ts-node": "5.0.1",
+    "typescript": "3.8.3",
+    "webpack": "5.0.0-beta.16",
+    "webpack-cli": "4.5.x",
+    "read-pkg": "5.x",
+    "comment-json": "4.x"
+  },
+  "consolePlugin": {
+    "name": "console-dynamic-foo",
+    "version": "0.0.0",
+    "displayName": "Console Demo Plugin",
+    "description": "Plasma reactors online. Initiating hyper drive.",
+    "exposedModules": {
+      "barUtils": "./utils/bar"
+    },
+    "dependencies": {
+      "@console/pluginAPI": "*"
+    }
+  }
+}
