@@ -23,5 +23,13 @@
         "kind": "ExampleModel"
       }
     }
+  },
+  {
+    "type": "console.page/route/standalone",
+    "properties": {
+      "exact": false,
+      "path": "/foo",
+      "component": { "$codeRef": "fooComp" }
+    }
   }
 ]
