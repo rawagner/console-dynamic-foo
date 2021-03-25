@@ -2,7 +2,7 @@ import * as React from 'react';
 // import { apis } from '@openshift-console/dynamic-plugin-sdk';
 
 const Foo: React.FC = () => {
-    const { useK8sWatchResource } = (window as any).apis;
+    const { useK8sWatchResource } = (window as any).api;
     const [data, loaded, loadError] = useK8sWatchResource({
       kind: 'Pod',
       isList: true,
