@@ -6,11 +6,12 @@
     "target": "es2016",
     "jsx": "react",
     "allowJs": true,
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": true,
     "paths": {
-      "@openshift-console/dynamic-plugin-sdk/webpack": ["@openshift-console/dynamic-plugin-sdk/lib/webpack/ConsoleRemotePlugin"]
-    }
+      "@openshift-console/dynamic-plugin-sdk/api": ["node_modules/@openshift-console/dynamic-plugin-sdk/lib/api/api"],
+      "@openshift-console/dynamic-plugin-sdk/webpack": ["node_modules/@openshift-console/dynamic-plugin-sdk/lib/webpack"],
+    },
   },
-  "include": ["src"]
-}
+  "include": ["src"],
+  }

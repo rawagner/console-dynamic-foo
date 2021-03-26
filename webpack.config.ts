@@ -37,6 +37,9 @@ const config: webpack.Configuration = {
     chunkIds: 'named',
     minimize: false,
   },
+  externals: {
+    '@openshift-console/dynamic-plugin-sdk/api': 'api',
+  }
 };
 
 if (process.env.NODE_ENV === 'production') {
