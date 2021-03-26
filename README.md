@@ -1,7 +1,7 @@
 # OpenShift Console Demo Plugin
 
 This project emulates a standalone repository hosting a sample
-[dynamic plugin](/frontend/packages/console-dynamic-plugin-sdk/README.md) for OpenShift Console.
+[dynamic plugin](https://github.com/openshift/console/tree/master/frontend/packages/console-dynamic-plugin-sdk/README.md) for OpenShift Console.
 
 It is meant to serve as a reference for Console plugin developers and for testing dynamic plugin
 capabilities via end-to-end tests.
@@ -29,8 +29,35 @@ yarn http-server -a 127.0.0.1
 ```
 
 See the plugin development section in
-[Console Dynamic Plugins README](/frontend/packages/console-dynamic-plugin-sdk/README.md) for details
+[Console Dynamic Plugins README](https://github.com/openshift/console/tree/master/frontend/packages/console-dynamic-plugin-sdk/README.md) for details
 on how to run Bridge using local plugins.
+
+## Using Console's API
+OpenShift Console exposes API via global window object in runtime. In order to use the API you need to configure [webpack externals](https://webpack.js.org/configuration/externals).
+
+1. in webpack.config.js add [externals configuration](https://github.com/rawagner/console-dynamic-foo/blob/wp_externals/webpack.config.ts#L40-L42)
+```
+externals: {
+  '@openshift-console/dynamic-plugin-sdk/api': 'api',
+}
+```
+2. Add path mapping to [tsconfig.json](https://github.com/rawagner/console-dynamic-foo/blob/wp_externals/tsconfig.json#L11-L14) - this step is needed because TS does not yet support node's package exports
+```
+"paths": {
+  "@openshift-console/dynamic-plugin-sdk/api": ["node_modules/@openshift-console/dynamic-plugin-sdk/lib/api/api"],
+}
+```
+
+After following the steps above you will be able to import API in your components/functions like
+
+```
+import { useK8sWatchResource } from '@openshift-console/dynamic-plugin-sdk/api';
+```
+See the usage in [Foo component](https://github.com/rawagner/console-dynamic-foo/blob/wp_externals/src/components/Foo.tsx)
+
+Every imported component/function from `@openshift-console/dynamic-plugin-sdk/api` will be replaced in runtime by an actual implementation.
+
+
 
 ## Deployment on cluster
 
