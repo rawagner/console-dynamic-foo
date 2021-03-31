@@ -7,7 +7,10 @@
     "jsx": "react",
     "allowJs": true,
     "strict": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "paths": {
+      "@openshift-console/dynamic-plugin-sdk/webpack": ["@openshift-console/dynamic-plugin-sdk/lib/webpack/ConsoleRemotePlugin"]
+    }
   },
   "include": ["src"]
 }

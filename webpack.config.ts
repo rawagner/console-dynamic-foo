@@ -2,7 +2,7 @@
 
 import * as webpack from 'webpack';
 import * as path from 'path';
-import { ConsoleRemotePlugin } from '@openshift-console/dynamic-plugin-sdk';
+import { ConsoleRemotePlugin } from '@openshift-console/dynamic-plugin-sdk/webpack';
 
 const config: webpack.Configuration = {
   mode: 'development',

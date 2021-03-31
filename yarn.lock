@@ -28,10 +28,10 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"
   integrity sha512-HyYEUDeIj5rRQU2Hk5HTB2uHsbRQpF70nvMhVzi+VJR0X+xNEhjPui4/kBf3VeH/wqD28PT4sVOm8qqLjBrSZg==
 
-"@openshift-console/dynamic-plugin-sdk@0.0.0-alpha1":
-  version "0.0.0-alpha1"
-  resolved "https://registry.yarnpkg.com/@openshift-console/dynamic-plugin-sdk/-/dynamic-plugin-sdk-0.0.0-alpha1.tgz#ad87d2ee098ba23c75cfbe093b52f377609426e6"
-  integrity sha512-YDsDCnwfxLKlItdU2X6JYmZ7/4GHtA2nr1ccgL38rGIKvorip3GSjds4RknUkpoyx8hG4FG616qF2Gauba0jkQ==
+"@openshift-console/dynamic-plugin-sdk@0.0.0-alpha11":
+  version "0.0.0-alpha11"
+  resolved "https://registry.yarnpkg.com/@openshift-console/dynamic-plugin-sdk/-/dynamic-plugin-sdk-0.0.0-alpha11.tgz#ea4f13bbd9f5bc39dfa3d94f471beabe8044f516"
+  integrity sha512-J3F8TjSUbrRQWfU0Y4jPm101hyxHySK/Jx+RDuOy5zPzI2mVKD94rxuhslepWC/ibK5lZH7jY6X0wLIFgGadrA==
 
 "@types/json-schema@^7.0.4":
   version "7.0.5"
