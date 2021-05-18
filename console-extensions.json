@@ -25,11 +25,20 @@
     }
   },
   {
-    "type": "console.page/route/standalone",
+    "type": "console.page/route",
     "properties": {
       "exact": false,
-      "path": "/foo",
+      "path": "/k8s/foo",
       "component": { "$codeRef": "fooComp" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "foo-id",
+      "name": "My Nav Item",
+      "href": "/k8s/foo",
+      "section": "administration"
     }
   }
 ]
