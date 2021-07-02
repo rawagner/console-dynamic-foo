@@ -40,5 +40,16 @@
       "href": "/k8s/foo",
       "section": "administration"
     }
+  },
+  {
+    "type": "console.olm/create-operand",
+    "properties": {
+      "model": {
+        "group": "operator.tekton.dev",
+        "version": "v1alpha1",
+        "kind": "TektonConfig"
+      },
+      "component": { "$codeRef": "fooComp" }
+    }
   }
 ]
