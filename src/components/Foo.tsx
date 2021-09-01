@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useK8sWatchResource } from '@openshift-console/dynamic-plugin-sdk/api';
-import { K8sResourceCommon } from '@openshift-console/dynamic-plugin-sdk';
+import { K8sResourceCommon, useK8sWatchResource } from '@openshift-console/dynamic-plugin-sdk';
 
 const Foo: React.FC = () => {
   const [data, loaded] = useK8sWatchResource<K8sResourceCommon[]>({
