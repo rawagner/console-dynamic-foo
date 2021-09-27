@@ -33,6 +33,14 @@
     }
   },
   {
+    "type": "console.page/route",
+    "properties": {
+      "exact": false,
+      "path": "/k8s/plans",
+      "component": { "$codeRef": "plansComp" }
+    }
+  },
+  {
     "type": "console.navigation/href",
     "properties": {
       "id": "foo-id",
