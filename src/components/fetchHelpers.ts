@@ -41,7 +41,7 @@ export const useFetchContext = (): IFetchContext => {
 
   let checkExpiry;
   let currentUser = {
-    access_token: "sha256~JQmn2Q1AGDmd8T-GSIlG-4YmiuqpcR6nxsaXx39wXlU",
+    access_token: "sha256~M4BIv5YWNAUWniqLPONXS2KdW2_x2Ay3VTaMMTNCON0",
     expiry_time: 8333,
   };
   return { history: useHistory(), checkExpiry, currentUser };
@@ -159,8 +159,8 @@ export const useAuthorizedK8sClient = () => {
 export const useClientInstance = (): ClusterClient => {
   // const { currentUser } = useNetworkContext();
   let currentUser = {
-    access_token: "sha256~JQmn2Q1AGDmd8T-GSIlG-4YmiuqpcR6nxsaXx39wXlU",
-    expiry_time: 8333,
+    access_token: "sha256~M4BIv5YWNAUWniqLPONXS2KdW2_x2Ay3VTaMMTNCON0",
+    expiry_time: 86400,
   };
   const user = {
     access_token: currentUser.access_token || "",
@@ -168,7 +168,7 @@ export const useClientInstance = (): ClusterClient => {
   };
   return ClientFactory.cluster(
     user,
-    "/api/plugins/console-dynamic-foo/cluster-api"
+    "/api/plugins/console-dynamic-foo/mig-api"
   );
 };
 

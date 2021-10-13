@@ -10,8 +10,10 @@ const ExtensionConsumerChild: React.FC = () => {
   // });
   return (
     <div>
-      {/* {loaded ? data.map((d) => <div key={d.metadata.uid}>{d.metadata.name}</div>) : 'loading'} */}
-
+      Plans list:
+      {plansQuery?.data?.items.map((d) => (
+        <div key={d.metadata.name}>{d.metadata.name}</div>
+      ))}
       {/* <div>The WebSocket is currently {connectionStatus}</div>
       {lastJsonMessage ? <span>Last message: {lastJsonMessage?.data?.kind}</span> : null}
       <ul></ul> */}

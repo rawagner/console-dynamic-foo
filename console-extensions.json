@@ -28,6 +28,14 @@
     "type": "console.page/route",
     "properties": {
       "exact": false,
+      "path": "/k8s/migrations",
+      "component": { "$codeRef": "migrationsComp" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": false,
       "path": "/k8s/foo",
       "component": { "$codeRef": "fooComp" }
     }
@@ -46,6 +54,15 @@
       "id": "foo-id",
       "name": "My Nav Item",
       "href": "/k8s/foo",
+      "section": "administration"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "migrations-id",
+      "name": "Migrations",
+      "href": "/k8s/migrations",
       "section": "administration"
     }
   }
