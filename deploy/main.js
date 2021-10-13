@@ -51,11 +51,11 @@ app.get("/login", async (req, res, next) => {
 
     //TODO: operator needs to use this redirect uri
     // redirectURIs:
-    // - http://localhost:9000/api/plugins/console-dynamic-foo/login/callback
+    // - http://localhost:9000/api/plugins/mig-ui-plugin/login/callback
 
     const authorizationUri = clusterAuth.authorizeURL({
       redirect_uri:
-        "http://localhost:9000/api/plugins/console-dynamic-foo/login/callback",
+        "http://localhost:9000/api/plugins/mig-ui-plugin/login/callback",
       // redirect_uri: "http://localhost:9000/login/callback",
       scope: "user:full",
     });
@@ -81,7 +81,7 @@ app.get("/login/callback", async (req, res, next) => {
   const options = {
     code,
     redirect_uri:
-      "http://localhost:9000/api/plugins/console-dynamic-foo/login/callback",
+      "http://localhost:9000/api/plugins/mig-ui-plugin/login/callback",
   };
   try {
     const clusterAuth = await getClusterAuth();
@@ -144,5 +144,5 @@ const getClusterAuth = async () => {
 app.use(express.static(path.join(__dirname, "../dist"))); //  "public" off of current is root
 
 app.listen(port, () => {
-  console.log(`Dynamic demo plugin app listening at http://localhost:${port}`);
+  console.log(`Mig UI plugin app listening at http://localhost:${port}`);
 });

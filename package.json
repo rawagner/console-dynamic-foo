@@ -2,7 +2,7 @@
   "name": "dynamic-demo-foo",
   "version": "0.0.0",
   "private": true,
-  "repository": "git@github.com:rawagner/console-dynamic-foo.git",
+  "repository": "git@github.com:rawagner/mig-ui-plugin.git",
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "yarn clean && NODE_ENV=production yarn ts-node ./node_modules/.bin/webpack",
@@ -46,10 +46,10 @@
     "webpack-cli": "4.5.x"
   },
   "consolePlugin": {
-    "name": "console-dynamic-foo",
-    "version": "0.0.0",
-    "displayName": "Console Demo Plugin",
-    "description": "Plasma reactors online. Initiating hyper drive.",
+    "name": "mig-ui-plugin",
+    "version": "0.0.1",
+    "displayName": "Mig UI Plugin",
+    "description": "Plugin for MTC within the console.",
     "exposedModules": {
       "barUtils": "./utils/bar",
       "clustersComp": "./components/ClustersPage.tsx",

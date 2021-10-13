@@ -33,6 +33,7 @@ See the plugin development section in
 on how to run Bridge using local plugins.
 
 ## Using Console's API
+
 Just import what you need from `@openshift-console/dynamic-plugin-sdk`
 
 ie
@@ -70,7 +71,7 @@ oc edit console.operator.openshift.io cluster
 # ...
 spec:
   plugins:
-    - console-dynamic-foo
+    - mig-ui-plugin
 # ...
 ```
 
@@ -80,15 +81,15 @@ Following commands should be executed in Console repository root.
 
 1. Build the image:
    ```sh
-   docker build -f Dockerfile.plugins.demo -t quay.io/$USER/console-dynamic-foo .
+   docker build -f Dockerfile.plugins.demo -t quay.io/$USER/mig-ui-plugin .
    ```
 2. Run the image:
    ```sh
-   docker run -it -p 9001:9001 quay.io/$USER/console-dynamic-foo
+   docker run -it -p 9001:9001 quay.io/$USER/mig-ui-plugin
    ```
 3. Push the image to image registry:
    ```sh
-   docker push quay.io/$USER/console-dynamic-foo
+   docker push quay.io/$USER/mig-ui-plugin
    ```
 
 Update and apply `oc-manifest.yaml` to use a custom plugin image.
