@@ -52,9 +52,8 @@
     "description": "Plasma reactors online. Initiating hyper drive.",
     "exposedModules": {
       "barUtils": "./utils/bar",
-      "fooComp": "./components/Foo.tsx",
-      "plansComp": "./components/PlansList.tsx",
-      "migrationsComp": "./components/PlansList.tsx"
+      "clustersComp": "./components/ClustersPage.tsx",
+      "plansComp": "./components/PlansPage.tsx"
     },
     "dependencies": {
       "@console/pluginAPI": "*"

@@ -28,42 +28,42 @@
     "type": "console.page/route",
     "properties": {
       "exact": false,
-      "path": "/k8s/migrations",
-      "component": { "$codeRef": "migrationsComp" }
+      "path": "/clusters",
+      "component": { "$codeRef": "clustersComp" }
     }
   },
   {
     "type": "console.page/route",
     "properties": {
       "exact": false,
-      "path": "/k8s/foo",
-      "component": { "$codeRef": "fooComp" }
-    }
-  },
-  {
-    "type": "console.page/route",
-    "properties": {
-      "exact": false,
-      "path": "/k8s/plans",
+      "path": "/plans",
       "component": { "$codeRef": "plansComp" }
     }
   },
   {
     "type": "console.navigation/href",
     "properties": {
-      "id": "foo-id",
-      "name": "My Nav Item",
-      "href": "/k8s/foo",
-      "section": "administration"
+      "id": "plans-page",
+      "name": "Plans",
+      "href": "/plans",
+      "section": "admin-migrations-section"
     }
   },
   {
     "type": "console.navigation/href",
     "properties": {
-      "id": "migrations-id",
-      "name": "Migrations",
-      "href": "/k8s/migrations",
-      "section": "administration"
+      "id": "clusters-page",
+      "name": "Clusters",
+      "href": "/clusters",
+      "section": "admin-migrations-section"
+    }
+  },
+  {
+    "type": "console.navigation/section",
+    "properties": {
+      "id": "admin-migrations-section",
+      "perspective": "admin",
+      "name": "Migrations"
     }
   }
 ]

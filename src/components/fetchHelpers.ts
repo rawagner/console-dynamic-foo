@@ -41,7 +41,7 @@ export const useFetchContext = (): IFetchContext => {
 
   let checkExpiry;
   let currentUser = {
-    access_token: "sha256~M4BIv5YWNAUWniqLPONXS2KdW2_x2Ay3VTaMMTNCON0",
+    access_token: "sha256~X7I2MQ0mwGK78oQscHZXz38rYy20GnjohCptZnF0sS4",
     expiry_time: 8333,
   };
   return { history: useHistory(), checkExpiry, currentUser };
@@ -159,7 +159,7 @@ export const useAuthorizedK8sClient = () => {
 export const useClientInstance = (): ClusterClient => {
   // const { currentUser } = useNetworkContext();
   let currentUser = {
-    access_token: "sha256~M4BIv5YWNAUWniqLPONXS2KdW2_x2Ay3VTaMMTNCON0",
+    access_token: "sha256~X7I2MQ0mwGK78oQscHZXz38rYy20GnjohCptZnF0sS4",
     expiry_time: 86400,
   };
   const user = {
